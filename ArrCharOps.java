@@ -140,7 +140,7 @@ public class ArrCharOps {
     public static long hashCode(char[] arr) {
         int hash = 0;
         for (int i = 0; i < arr.length; i++) {
-            hash += arr[i] * Math.pow(7, (arr.length-(i+1)));
+            hash += ( (int) arr[i] ) * Math.pow( 7, (arr.length-(i+1)) );
         }
         return hash;
     }
@@ -174,6 +174,11 @@ public class ArrCharOps {
         if ( !(str1 instanceof String) || !(str2 instanceof String) ) {
             return -2;
         }
+        if (str1.length() == 0 || str2.length() == 0) {
+            return -2;
+        }
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
         int upTo = str1.length();
         if (str2.length() < str1.length()) {
             upTo = str2.length();
