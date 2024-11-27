@@ -5,10 +5,8 @@ public class Primes {
         boolean[] preems = new boolean[n+1];
 
         for (int i = 0; i <= n; i++) { // default all positions as true
-            if (i >= 2) {
-                preems[i] = true;
-            }
-            else {
+            preems[i] = true;
+            if (i < 2) {
                 preems[i] = false; // 0 and 1 default to false obv
             }
         }
