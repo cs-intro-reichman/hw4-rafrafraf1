@@ -30,6 +30,9 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         for (int i = 0; i < str1.length(); i++) {
             int tmpi = i;
+            if (str1.length() - tmpi < str2.length()) {
+                return false;
+            }
             for (int j = 0; j < str2.length(); j++) {
                 if (str1.charAt(tmpi) == str2.charAt(j)) {
                     tmpi++;
