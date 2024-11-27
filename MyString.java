@@ -42,6 +42,6 @@ public class MyString {
                 }
             }
         }
-        return false;
+        return str2.length() == 0; // empty strings are "contained" in all strings ygm
     }
 }
