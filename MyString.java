@@ -37,7 +37,7 @@ public class MyString {
                 else {
                     break;
                 }
-                if (j == str2.length()-1) {
+                if ( j >= (str2.length()-1) || tmpi >= (str1.length()-1) ) {
                     return true;
                 }
             }

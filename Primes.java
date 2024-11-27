@@ -1,7 +1,6 @@
 public class Primes {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
-
         boolean[] preems = new boolean[n+1];
 
         for (int i = 0; i <= n; i++) { // default all positions as true
@@ -10,7 +9,6 @@ public class Primes {
                 preems[i] = false; // 0 and 1 default to false obv
             }
         }
-        
         System.out.println("Prime numbers up to " + n + ":");
 
         int counter = 0;
