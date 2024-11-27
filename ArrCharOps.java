@@ -120,7 +120,7 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        if (beginIndex < 0 || endIndex < 0 || endIndex < beginIndex || beginIndex >= arr.length || endIndex >= arr.length) {
+        if (beginIndex < 0 || endIndex < 0 || endIndex < beginIndex || beginIndex > arr.length || endIndex > arr.length) {
             return null;
         }
         char[] newArr = new char[endIndex - beginIndex];
@@ -177,8 +177,6 @@ public class ArrCharOps {
         if (str1.length() == 0 || str2.length() == 0) {
             return -2;
         }
-        str1 = str1.toLowerCase();
-        str2 = str2.toLowerCase();
         int upTo = str1.length();
         if (str2.length() < str1.length()) {
             upTo = str2.length();
